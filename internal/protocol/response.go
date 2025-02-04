@@ -217,6 +217,12 @@ func ParseErrorCode(errorCode int16) error {
 		return errors.New("leader not available")
 	case 7:
 		return errors.New("request timed out")
+	case 36:
+		return errors.New("invalid replication factor")
+	case 39:
+		return errors.New("topic already exists")
+	case 38:
+		return errors.New("invalid topic configuration")
 	case 41:
 		return errors.New("invalid replication factor")
 	// Add more error codes as needed
